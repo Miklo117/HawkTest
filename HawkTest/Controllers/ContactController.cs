@@ -21,6 +21,7 @@ namespace HawkTest.Controllers
         {
             _context.Dispose();
         }
+
         // GET: Contact
         public ActionResult Index()
         {
@@ -28,6 +29,10 @@ namespace HawkTest.Controllers
             return View(contacts);
         }
 
+        public ActionResult Detail(Contact contact)
+        {
+            return View(contact);
+        }
         public ActionResult Update(int id)
         {
             Contact contact = _context.Contact.Find(id);

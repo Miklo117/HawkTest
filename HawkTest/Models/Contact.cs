@@ -14,6 +14,12 @@ namespace HawkTest.Models
         [Required]
         public string Last { get; set; }
         public List<ContactDetail> Detail { get; set; }
+        
+        public string FullName
+        {
+            get { return Name + " " + Last; }
+        }
+
 
     }
 }
